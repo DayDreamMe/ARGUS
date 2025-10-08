@@ -1,0 +1,17 @@
+ethical_mode: true
+request_delay: 0.1
+timeout: 10
+max_retries: 3
+report_format: json
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+safety_limits:
+  max_requests_per_minute: 30
+  max_payment_amount: 0.01
+  forbidden_actions:
+    - data_deletion
+    - real_payments
+    - user_data_access
